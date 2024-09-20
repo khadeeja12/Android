@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
         NotificationManager man=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         man.notify(1,builder.build());
-        Toast.makeText(MainActivity.this,"This is notification",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"This is notification",Toast.LENGTH_LONG).show();
 
     }
 }
