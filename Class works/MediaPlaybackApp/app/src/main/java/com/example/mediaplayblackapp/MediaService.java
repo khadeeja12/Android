@@ -12,37 +12,34 @@ public class MediaService extends Service {
     public MediaService() {
     }
 
-    public int onStartCommand(Intent intent,int flags,int start_id)
-    {
-          if(intent==null)
-          {
-              String action=intent.getAction();
-              if(action!=null)
-              {
-                 switch(action)
-                 {
-                     case "START":
-                         player=MediaPlayer.create(this,Settings.System.DEFAULT_RINGTONE_URI);
-                         player.setLooping(true);
-                         player.start();
-                         break;
-                     case "PAUSE":
-                         if(player!=null && player.isPlaying())
-                         {
-                             player.pause();
-                         }
-                         break;
-                     case "RESUME":
-                         if(player!=null && !player.isPlaying())
-                         {
-                             player.start();
-                         }
-                         break;
-                 }
-              }
-          }
-          return START_STICKY; //if service killed by system ( due to lack of resources or power failure), should be restarted with a null intent
+    public int onStartCommand(Intent intent, int flags, int start_id) {
+        if (intent != null) {
+            String action = intent.getAction();
+            if (action != null) {
+                switch (action) {
+                    case "START":
+                        if (player == null) {
+                            player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
+                            player.setLooping(true);
+                        }
+                        player.start();
+                        break;
+                    case "PAUSE":
+                        if (player != null && player.isPlaying()) {
+                            player.pause();
+                        }
+                        break;
+                    case "RESUME":
+                        if (player != null && !player.isPlaying()) {
+                            player.start();
+                        }
+                        break;
+                }
+            }
+        }
+        return START_STICKY;
     }
+
     public void onDestroy()
     {
         super.onDestroy();

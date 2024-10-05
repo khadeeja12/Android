@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A8AB87"
+    android:backgroundTint="#C5C8A0"
     tools:context=".MainActivity">
 
     <TextView
@@ -26,62 +28,76 @@
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="478dp"
         android:onClick="startMedia"
         android:text="START"
-        app:layout_constraintBottom_toTopOf="@+id/button_stop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="388dp"
         android:onClick="stopMedia"
         android:text="STOP"
-        app:layout_constraintBottom_toTopOf="@+id/button_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_start" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_resume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="229dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="479dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="204dp"
         android:onClick="resumeMedia"
         android:text="RESUME"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_pause" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="381dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="302dp"
         android:onClick="pauseMedia"
         android:text="PAUSE"
-        app:layout_constraintBottom_toTopOf="@+id/button_resume"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_stop" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="559dp"
+        android:text="Khadeeja Beevi C N"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
